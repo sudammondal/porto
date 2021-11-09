@@ -1,0 +1,67 @@
+.header {
+    background-color: #212529;
+    .navbar {
+        .navbar-brand {
+            width: 88px;
+        }
+        .btn-primary {
+            margin-left: auto;
+            background: linear-gradient(135deg,#0088cc 0%,#0169fe 80%)!important;
+            border-radius: 34px;
+            border: 0;
+            padding: 10px 20px;
+            display: none;
+        }
+        .barger_button {
+            margin-left: 10px;
+        }
+        .collapse {
+            .navbar-nav {
+                margin: 0 auto;
+                .nav-item {
+                    .nav-link {
+                        color: #fff;
+                        font-size: 14px;
+                        font-weight: 600;
+                        text-transform: capitalize;
+                        position: relative;
+                        transition: all 0.5s;
+                        padding-left: 0;
+                        padding-right: 0;
+                        padding-bottom: 5px;
+                        margin: 0 10px;
+                        margin-bottom: 8px;
+                        
+                        &::before {
+                            position: absolute;
+                            content: "";
+                            bottom: 0;
+                            right: 0;
+                            width: 0%;
+                            height: 3px;
+                            background: #08c;
+                            opacity: 0;
+                            transition: all 0.5s;
+                        }
+                        &.active,
+                        &:hover {
+                            color: #fff;
+                            &::before {
+                                width: 100%;
+                                right: auto;
+                                left: 0;
+                                opacity: 1;
+                            }
+                        }
+   
+                    }
+
+                    ::after {
+                        content: "";
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
